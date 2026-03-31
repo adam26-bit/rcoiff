@@ -1,24 +1,37 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- TODO: Set the document title to the name of your application -->
-    <title>Lovable App</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
-
-    <!-- TODO: Update og:title to match your application name -->
-    <meta property="og:title" content="Lovable App" />
-    <meta property="og:description" content="Lovable Generated Project" />
+    <title>R'Coiff — Salon de Coiffure Premium à Villeneuve-le-Roi</title>
+    <meta name="description" content="R'Coiff, votre salon de coiffure haut de gamme à Villeneuve-le-Roi. Coupes homme & femme, barbe, coloration, soins capillaires. Prenez rendez-vous au 09 61 00 74 49." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://rcoiff.fr" />
+    <meta property="og:title" content="R'Coiff — Salon de Coiffure Premium" />
+    <meta property="og:description" content="Votre salon de coiffure haut de gamme à Villeneuve-le-Roi. Expertise, élégance et attention personnalisée." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Lovable" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HairSalon",
+      "name": "R'Coiff",
+      "telephone": "+33961007449",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2 Place de la Grande Fontaine",
+        "addressLocality": "Villeneuve-le-Roi",
+        "postalCode": "94290",
+        "addressCountry": "FR"
+      },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "19:30" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "18:00" }
+      ],
+      "priceRange": "€€",
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "150" }
+    }
+    </script>
   </head>
-
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
