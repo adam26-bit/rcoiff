@@ -10,6 +10,7 @@ const services = [
     price: "20€",
     items: ["Coupe classique", "Dégradé", "Coupe + barbe", "Coupe enfant"],
     accent: "from-amber-500/20 to-yellow-600/10",
+    image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80",
   },
   {
     icon: Scissors,
@@ -18,6 +19,7 @@ const services = [
     price: "30€",
     items: ["Coupe + brushing", "Coupe courte", "Coupe longue", "Coupe enfant"],
     accent: "from-rose-500/20 to-pink-600/10",
+    image: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=600&q=80",
   },
   {
     icon: Sparkles,
@@ -26,6 +28,7 @@ const services = [
     price: "15€",
     items: ["Taille classique", "Rasage traditionnel", "Soin barbe", "Contours"],
     accent: "from-blue-500/20 to-indigo-600/10",
+    image: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=80",
   },
   {
     icon: Palette,
@@ -34,6 +37,7 @@ const services = [
     price: "40€",
     items: ["Coloration complète", "Mèches", "Balayage", "Patine"],
     accent: "from-purple-500/20 to-violet-600/10",
+    image: "https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?w=600&q=80",
   },
   {
     icon: Droplets,
@@ -42,6 +46,7 @@ const services = [
     price: "25€",
     items: ["Soin profond", "Kératine", "Botox capillaire", "Masque nutrition"],
     accent: "from-emerald-500/20 to-teal-600/10",
+    image: "https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=600&q=80",
   },
 ];
 
@@ -80,8 +85,16 @@ export default function Prestations() {
                 onMouseEnter={() => setHoveredIndex(i)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
-                {/* Top accent */}
-                <div className={`h-1 w-full bg-gradient-to-r ${s.accent} group-hover:h-1.5 transition-all duration-300`} />
+                {/* Image */}
+                <div className="relative h-44 overflow-hidden">
+                  <img
+                    src={s.image}
+                    alt={s.title}
+                    loading="lazy"
+                    className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105 brightness-75 saturate-[0.85]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-card" />
+                </div>
                 <div className={`absolute inset-0 bg-gradient-to-br ${s.accent} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
 
                 <div className="relative p-7">

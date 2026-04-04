@@ -9,6 +9,8 @@ import Contact from "@/components/salon/Contact";
 import Footer from "@/components/salon/Footer";
 import LoadingScreen from "@/components/salon/LoadingScreen";
 import ExitIntentPopup from "@/components/salon/ExitIntentPopup";
+import WhatsAppButton from "@/components/salon/WhatsAppButton";
+import CookieBanner from "@/components/salon/CookieBanner";
 
 const Index = () => {
   return (
@@ -24,6 +26,8 @@ const Index = () => {
       <Reservation />
       <Contact />
       <Footer />
+      <WhatsAppButton />
+      <CookieBanner />
     </div>
   );
 };

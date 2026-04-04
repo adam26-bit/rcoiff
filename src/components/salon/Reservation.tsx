@@ -10,9 +10,21 @@ export default function Reservation() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // Ouvre l'application email avec les données pré-remplies
+    const subject = encodeURIComponent("Demande de RDV — R'Coiff");
+    const body = encodeURIComponent(
+      `Bonjour,\n\nNouvelle demande de rendez-vous :\n\n` +
+      `Nom : ${form.name}\n` +
+      `Email : ${form.email}\n` +
+      `Téléphone : ${form.phone}\n` +
+      `Prestation : ${form.service}\n` +
+      (form.message ? `Message : ${form.message}\n` : "") +
+      `\nMerci de confirmer le créneau.`
+    );
+    window.location.href = `mailto:contact@rcoiff.fr?subject=${subject}&body=${body}`;
     toast({
       title: "Demande envoyée !",
-      description: "Nous vous recontacterons dans les plus brefs délais pour confirmer votre rendez-vous.",
+      description: "Votre application email s'est ouverte. Envoyez le message pour confirmer votre demande.",
     });
     setForm({ name: "", email: "", phone: "", service: "", message: "" });
   };
