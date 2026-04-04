@@ -2,8 +2,13 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import Footer from "@/components/salon/Footer";
 import Navbar from "@/components/salon/Navbar";
+import { useEffect } from "react";
 
 const MentionsLegales = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen">
       <Navbar />
