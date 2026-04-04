@@ -2,11 +2,17 @@ import { Link } from "react-router-dom";
 import { Scissors, Phone, MapPin, Instagram } from "lucide-react";
 
 export default function Footer() {
+  const handleNavClick = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <footer className="bg-charcoal text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-          {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
               <Scissors className="w-6 h-6 text-gold" />
@@ -17,21 +23,28 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Links */}
           <div>
             <h4 className="font-display text-lg font-semibold mb-4 text-gold">Navigation</h4>
             <ul className="space-y-2">
-              {["Accueil", "Prestations", "Équipe", "Avis", "Contact"].map((l) => (
-                <li key={l}>
-                  <a href={`/#${l.toLowerCase().replace("é", "e")}`} className="text-white/60 hover:text-gold font-body text-sm transition-colors">
-                    {l}
-                  </a>
+              {[
+                { label: "Accueil", id: "accueil" },
+                { label: "Prestations", id: "prestations" },
+                { label: "Équipe", id: "equipe" },
+                { label: "Avis", id: "avis" },
+                { label: "Contact", id: "contact" },
+              ].map((l) => (
+                <li key={l.label}>
+                  <button
+                    onClick={() => handleNavClick(l.id)}
+                    className="text-white/60 hover:text-gold font-body text-sm transition-colors"
+                  >
+                    {l.label}
+                  </button>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
             <h4 className="font-display text-lg font-semibold mb-4 text-gold">Contact</h4>
             <div className="space-y-3">
@@ -46,7 +59,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Horaires */}
           <div>
             <h4 className="font-display text-lg font-semibold mb-4 text-gold">Horaires</h4>
             <div className="space-y-1.5 font-body text-sm">

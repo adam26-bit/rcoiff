@@ -7,10 +7,14 @@ import Reviews from "@/components/salon/Reviews";
 import Reservation from "@/components/salon/Reservation";
 import Contact from "@/components/salon/Contact";
 import Footer from "@/components/salon/Footer";
+import LoadingScreen from "@/components/salon/LoadingScreen";
+import ExitIntentPopup from "@/components/salon/ExitIntentPopup";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <LoadingScreen />
+      <ExitIntentPopup />
       <Navbar />
       <Hero />
       <About />
