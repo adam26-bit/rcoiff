@@ -50,12 +50,8 @@ export default function Team() {
               }`}
               style={{ transitionDelay: `${i * 200}ms` }}
             >
-              <div className="relative mb-6 mx-auto w-48 h-48 rounded-full overflow-hidden border-4 border-gold/20 group-hover:border-gold/50 transition-all duration-500 shadow-xl">
-                <img
-                  src={m.image}
-                  alt={m.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                />
+              <div className="relative mb-6 mx-auto w-24 h-24 rounded-full bg-gold/10 border-4 border-gold/20 group-hover:border-gold/50 transition-all duration-500 shadow-xl flex items-center justify-center">
+                <span className="font-display text-3xl font-bold text-gold">{m.name[0]}</span>
               </div>
               <h3 className="font-display text-2xl font-semibold text-foreground mb-1">{m.name}</h3>
               <p className="text-gold font-body text-sm font-semibold mb-1">{m.role}</p>
