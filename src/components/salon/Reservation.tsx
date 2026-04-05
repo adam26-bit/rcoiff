@@ -10,21 +10,18 @@ export default function Reservation() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Ouvre l'application email avec les données pré-remplies
-    const subject = encodeURIComponent("Demande de RDV — R'Coiff");
-    const body = encodeURIComponent(
-      `Bonjour,\n\nNouvelle demande de rendez-vous :\n\n` +
+    // Redirige vers WhatsApp avec les infos pré-remplies
+    const message = encodeURIComponent(
+      `Bonjour R'Coiff, je souhaite prendre rendez-vous :\n\n` +
       `Nom : ${form.name}\n` +
-      `Email : ${form.email}\n` +
       `Téléphone : ${form.phone}\n` +
       `Prestation : ${form.service}\n` +
-      (form.message ? `Message : ${form.message}\n` : "") +
-      `\nMerci de confirmer le créneau.`
+      (form.message ? `Message : ${form.message}\n` : "")
     );
-    window.location.href = `mailto:contact@rcoiff.fr?subject=${subject}&body=${body}`;
+    window.open(`https://wa.me/33961007449?text=${message}`, "_blank");
     toast({
       title: "Demande envoyée !",
-      description: "Votre application email s'est ouverte. Envoyez le message pour confirmer votre demande.",
+      description: "WhatsApp s'est ouvert avec votre demande. Envoyez le message pour confirmer votre RDV.",
     });
     setForm({ name: "", email: "", phone: "", service: "", message: "" });
   };
