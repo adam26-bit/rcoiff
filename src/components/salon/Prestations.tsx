@@ -130,13 +130,13 @@ export default function Prestations() {
                   </div>
 
                   {/* CTA */}
-                  <a
-                    href="tel:0961007449"
-                    className="inline-flex items-center gap-2 text-gold font-body text-sm font-semibold group-hover:gap-3 transition-all duration-300 pt-4 border-t border-border/40"
+                  <button
+                    onClick={() => document.getElementById("reservation")?.scrollIntoView({ behavior: "smooth" })}
+                    className="inline-flex items-center gap-2 text-gold font-body text-sm font-semibold group-hover:gap-3 transition-all duration-300 pt-4 border-t border-border/40 bg-transparent border-x-0 border-b-0 cursor-pointer"
                   >
                     Réserver
                     <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                  </a>
+                  </button>
                 </div>
               </div>
             );
