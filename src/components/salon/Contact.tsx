@@ -49,7 +49,7 @@ export default function Contact() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="R'Coiff - Villeneuve-le-Roi"
+                title="R Coiff' - Villeneuve-le-Roi"
               />
             </div>
           </div>

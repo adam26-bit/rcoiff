@@ -53,7 +53,7 @@ export default function ExitIntentPopup() {
           </p>
 
           <p className="text-muted-foreground font-body text-sm mb-6 leading-relaxed">
-            Offrez-vous une coupe d'exception chez R'Coiff. 
+            Offrez-vous une coupe d'exception chez R Coiff'. 
             Nos experts vous attendent pour sublimer votre style.
           </p>
 

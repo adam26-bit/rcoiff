@@ -12,7 +12,7 @@ export default function Reservation() {
     e.preventDefault();
     // Redirige vers WhatsApp avec les infos pré-remplies
     const message = encodeURIComponent(
-      `Bonjour R'Coiff, je souhaite prendre rendez-vous :\n\n` +
+      `Bonjour R Coiff', je souhaite prendre rendez-vous :\n\n` +
       `Nom : ${form.name}\n` +
       `Téléphone : ${form.phone}\n` +
       `Prestation : ${form.service}\n` +

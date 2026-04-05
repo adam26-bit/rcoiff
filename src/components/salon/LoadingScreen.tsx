@@ -73,7 +73,7 @@ export default function LoadingScreen() {
 
       {/* Brand */}
       <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-2">
-        R'<span className="text-gold">Coiff</span>
+        R <span className="text-gold">Coiff'</span>
       </h1>
       <p className="text-white/40 font-body text-sm tracking-[0.25em] uppercase mb-10">
         L'excellence capillaire

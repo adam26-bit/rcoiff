@@ -49,7 +49,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center gap-2" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
             <span className="text-2xl font-display font-bold tracking-wider text-white">
-              R'<span className="text-gold">Coiff</span>
+              R <span className="text-gold">Coiff'</span>
             </span>
           </Link>
 

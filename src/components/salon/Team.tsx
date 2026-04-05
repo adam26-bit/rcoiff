@@ -5,7 +5,7 @@ const team = [
     name: "Ramzi",
     role: "Fondateur & Coiffeur Expert",
     experience: "10+ ans d'expérience",
-    desc: "Passionné par l'art capillaire depuis toujours, Ramzi a fondé R'Coiff avec une vision : offrir l'excellence à chaque client. Son expertise et son écoute font de chaque visite un moment unique.",
+    desc: "Passionné par l'art capillaire depuis toujours, Ramzi a fondé R Coiff' avec une vision : offrir l'excellence à chaque client. Son expertise et son écoute font de chaque visite un moment unique.",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
   },
   {

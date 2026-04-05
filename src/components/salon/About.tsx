@@ -19,7 +19,7 @@ export default function About() {
           <div className="relative rounded-2xl overflow-hidden h-[420px] shadow-2xl">
             <img
               src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=800&q=85"
-              alt="Salon R'Coiff — ambiance premium"
+              alt="Salon R Coiff' — ambiance premium"
               loading="lazy"
               className="w-full h-full object-cover object-center brightness-75 saturate-90"
             />
@@ -36,7 +36,7 @@ export default function About() {
             </h2>
             <div className="w-20 h-[2px] bg-gold mb-6" />
             <p className="text-muted-foreground font-body text-lg leading-relaxed">
-              Fondé en 2025 par Ramzi Araoud, R'Coiff est né d'une passion profonde pour l'art capillaire.
+              Fondé en 2025 par Ramzi Araoud, R Coiff' est né d'une passion profonde pour l'art capillaire.
               Notre mission : offrir à chaque client une expérience unique, alliant savoir-faire technique
               et conseil personnalisé dans un cadre élégant et accueillant.
             </p>

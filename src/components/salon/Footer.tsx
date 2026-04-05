@@ -16,7 +16,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <Scissors className="w-6 h-6 text-gold" />
-              <span className="text-2xl font-display font-bold">R'<span className="text-gold">Coiff</span></span>
+              <span className="text-2xl font-display font-bold">R <span className="text-gold">Coiff'</span></span>
             </div>
             <p className="text-white/60 font-body text-sm leading-relaxed mb-5">
               Votre salon de coiffure premium à Villeneuve-le-Roi. Excellence, passion et style au quotidien.
@@ -86,7 +86,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-white/40 font-body text-xs">
-            © {new Date().getFullYear()} R'Coiff — SASU — SIREN 990 587 073. Tous droits réservés.
+            © {new Date().getFullYear()} R Coiff' — SASU — SIREN 990 587 073. Tous droits réservés.
           </p>
           <div className="flex items-center gap-6">
             <Link to="/mentions-legales" className="text-white/40 hover:text-gold font-body text-xs transition-colors">

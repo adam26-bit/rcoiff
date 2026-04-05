@@ -42,7 +42,7 @@ export default function Hero() {
           transition={{ delay: 0.5, duration: 0.8 }}
           className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white mb-6 leading-tight"
         >
-          R'<span className="text-gold">Coiff</span>
+          R <span className="text-gold">Coiff'</span>
         </motion.h1>
 
         <motion.p

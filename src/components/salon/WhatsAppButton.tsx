@@ -1,10 +1,10 @@
 export default function WhatsAppButton() {
   return (
     <a
-      href="https://wa.me/33961007449?text=Bonjour%2C%20je%20souhaite%20prendre%20rendez-vous%20chez%20R'Coiff."
+      href="https://wa.me/33961007449?text=Bonjour%2C%20je%20souhaite%20prendre%20rendez-vous%20chez%20R Coiff'."
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Contacter R'Coiff sur WhatsApp"
+      aria-label="Contacter R Coiff' sur WhatsApp"
       className="fixed bottom-6 left-6 z-50 w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-lg hover:scale-110 hover:shadow-[0_8px_30px_rgba(37,211,102,0.5)] transition-all duration-300"
     >
       <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
