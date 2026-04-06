@@ -69,9 +69,12 @@ export default function Reservation() {
               </div>
               <div className="space-y-2 ml-[4.5rem]">
                 {[
-                  { day: "Lundi", hours: "Fermé" },
-                  { day: "Mardi - Vendredi", hours: "09h00 - 19h30" },
-                  { day: "Samedi", hours: "09h00 - 18h00" },
+                  { day: "Lundi", hours: "09h30 - 19h00" },
+                  { day: "Mardi", hours: "09h30 - 19h00" },
+                  { day: "Mercredi", hours: "09h30 - 18h00" },
+                  { day: "Jeudi", hours: "09h30 - 19h00" },
+                  { day: "Vendredi", hours: "09h30 - 19h00" },
+                  { day: "Samedi", hours: "09h00 - 18h30" },
                   { day: "Dimanche", hours: "Fermé" },
                 ].map((h) => (
                   <div key={h.day} className="flex justify-between text-sm font-body">

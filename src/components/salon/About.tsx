@@ -25,7 +25,7 @@ export default function About() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 bg-gold text-black px-4 py-2 rounded-full font-body font-bold text-sm">
-              ★ 4.9/5 — 150+ avis Google
+              ★ 5.0/5 — 150+ avis Google
             </div>
           </div>
           {/* Text */}

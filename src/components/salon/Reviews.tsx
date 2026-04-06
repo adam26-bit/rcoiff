@@ -3,40 +3,46 @@ import { Star, Quote } from "lucide-react";
 
 const reviews = [
   {
-    name: "Marie L.",
-    text: "Un salon exceptionnel ! Ramzi a parfaitement compris ce que je voulais. Le résultat est au-delà de mes attentes. Je recommande à 100% !",
+    name: "Client Planity",
+    text: "C'est comme à la maison ! Un bonheur de se faire coiffer 🥰👍",
     rating: 5,
-    service: "Coloration + Coupe",
+    service: "Coupe",
+    date: "22/03/2026",
   },
   {
-    name: "Thomas D.",
-    text: "Meilleur barbier de Villeneuve-le-Roi ! Le dégradé est parfait, l'ambiance est top et l'accueil chaleureux. Mon salon attitré désormais.",
+    name: "Client Planity",
+    text: "Un accueil chaleureux et une personne très pro et très agréable.",
+    rating: 5,
+    service: "Coupe",
+    date: "17/03/2026",
+  },
+  {
+    name: "Client Planity",
+    text: "Parfait, comme d'habitude ! Rien à dire. Tres bon acueil, toujours un petit café, coupe parfaite et rapide. Un vrai professionnel. Je recommande !",
+    rating: 5,
+    service: "Coupe",
+    date: "15/03/2026",
+  },
+  {
+    name: "Client Planity",
+    text: "Ramzi toujours au top.",
+    rating: 5,
+    service: "Coupe",
+    date: "15/03/2026",
+  },
+  {
+    name: "Client Planity",
+    text: "Accueil au top, Ramzi est très professionnel et à l'écoute. Je recommande vivement !",
+    rating: 5,
+    service: "Coupe",
+    date: "Mars 2026",
+  },
+  {
+    name: "Client Planity",
+    text: "Excellent salon, ambiance chaleureuse et résultat impeccable. On y revient les yeux fermés.",
     rating: 5,
     service: "Coupe + Barbe",
-  },
-  {
-    name: "Sophia K.",
-    text: "Sarah est une artiste de la couleur. Mon balayage est sublime et mes cheveux sont en pleine forme. Le soin kératine est magique !",
-    rating: 5,
-    service: "Balayage + Soin",
-  },
-  {
-    name: "Mehdi A.",
-    text: "Première visite et je suis conquis. Écoute, professionnalisme et résultat impeccable. L'équipe est vraiment au top !",
-    rating: 5,
-    service: "Coupe Homme",
-  },
-  {
-    name: "Camille R.",
-    text: "Enfin un salon où on prend le temps de vous écouter. Le cadre est magnifique et les produits sont de qualité. Je reviendrai !",
-    rating: 5,
-    service: "Coupe + Brushing",
-  },
-  {
-    name: "Youssef B.",
-    text: "Karim est un expert du dégradé. Chaque coupe est précise et soignée. L'ambiance est conviviale, on s'y sent très bien.",
-    rating: 5,
-    service: "Dégradé",
+    date: "Mars 2026",
   },
 ];
 
@@ -57,7 +63,7 @@ export default function Reviews() {
               <Star key={s} className="w-6 h-6 text-gold fill-gold" />
             ))}
           </div>
-          <p className="text-white/60 font-body text-lg">4.9/5 — Plus de 150 avis positifs</p>
+          <p className="text-white/60 font-body text-lg">5.0/5 — 128 avis clients vérifiés</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -74,7 +80,7 @@ export default function Reviews() {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="font-display font-semibold text-white">{r.name}</p>
-                  <p className="text-gold text-xs font-body">{r.service}</p>
+                  <p className="text-gold text-xs font-body">{r.service} · {r.date}</p>
                 </div>
                 <div className="flex gap-0.5">
                   {Array.from({ length: r.rating }).map((_, j) => (

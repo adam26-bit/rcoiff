@@ -19,9 +19,8 @@ export default function Contact() {
           <div className={`space-y-8 transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"}`}>
             {[
               { icon: MapPin, label: "Adresse", value: "2 Place de la Grande Fontaine", sub: "94290 Villeneuve-le-Roi" },
-              { icon: Phone, label: "Téléphone", value: "09 61 00 74 49", sub: "Du mardi au samedi" },
-              { icon: Mail, label: "Email", value: "contact@rcoiff.fr", sub: "Réponse sous 24h" },
-              { icon: Clock, label: "Horaires", value: "Mar-Ven: 9h-19h30", sub: "Sam: 9h-18h" },
+              { icon: Phone, label: "Téléphone", value: "09 61 00 74 49", sub: "Du lundi au samedi" },
+              { icon: Clock, label: "Horaires", value: "Lun–Ven : 9h30–19h (Mer : 18h)", sub: "Sam : 9h–18h30 · Dim : Fermé" },
             ].map((c) => {
               const Icon = c.icon;
               return (
