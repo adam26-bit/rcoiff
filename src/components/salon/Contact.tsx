@@ -20,7 +20,7 @@ export default function Contact() {
             {[
               { icon: MapPin, label: "Adresse", value: "2 Place de la Grande Fontaine", sub: "94290 Villeneuve-le-Roi" },
               { icon: Phone, label: "Téléphone", value: "09 61 00 74 49", sub: "Du lundi au samedi" },
-              { icon: Clock, label: "Horaires", value: "Lun–Ven : 9h30–19h (Mer : 18h)", sub: "Sam : 9h–18h30 · Dim : Fermé" },
+              { icon: Clock, label: "Horaires", value: "Mar–Ven : 9h–12h / 14h–19h", sub: "Sam : 9h–18h · Lun & Dim : Fermé" },
             ].map((c) => {
               const Icon = c.icon;
               return (
