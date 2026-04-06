@@ -52,7 +52,7 @@ export default function Reservation() {
               </div>
               <div>
                 <h3 className="font-display text-lg font-semibold text-foreground">Par téléphone</h3>
-                <p className="text-gold font-body font-semibold">09 61 00 74 49</p>
+                <p className="text-gold font-body font-semibold">01 60 21 05 06</p>
                 <p className="text-muted-foreground font-body text-sm">Réponse immédiate aux heures d'ouverture</p>
               </div>
             </a>
