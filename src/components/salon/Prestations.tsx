@@ -48,6 +48,24 @@ const services = [
     accent: "from-emerald-500/20 to-teal-600/10",
     image: "https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=600&q=80",
   },
+  {
+    icon: Scissors,
+    title: "Shampoing + Coupe + Coiffage -25 ans",
+    desc: "Tarif jeune : shampoing, coupe sur-mesure et coiffage final pour les moins de 25 ans.",
+    price: "20€",
+    items: ["Shampoing inclus", "Coupe sur-mesure", "Coiffage", "30 min"],
+    accent: "from-cyan-500/20 to-sky-600/10",
+    image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80",
+  },
+  {
+    icon: Droplets,
+    title: "Coupe Bébé -3 ans",
+    desc: "Première coupe en douceur pour les tout-petits de moins de 3 ans. Patience et bienveillance assurées.",
+    price: "14€",
+    items: ["Coupe douce", "Bébé -3 ans", "Sans shampoing", "15 min"],
+    accent: "from-pink-500/20 to-rose-600/10",
+    image: "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=600&q=80",
+  },
 ];
 
 export default function Prestations() {
