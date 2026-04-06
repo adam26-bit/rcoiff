@@ -1,5 +1,6 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Scissors, Sparkles, Palette, Droplets, ChevronRight } from "lucide-react";
+import babyHaircutImg from "@/assets/baby-haircut.jpg";
 import { useState } from "react";
 
 const services = [
