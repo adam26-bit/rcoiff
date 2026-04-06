@@ -30,7 +30,7 @@ const MentionsLegales = () => {
               <li><strong>SIRET :</strong> 990 587 073 00018</li>
               <li><strong>Activité :</strong> Coiffure</li>
               <li><strong>Adresse :</strong> 2 Place de la Grande Fontaine, 94290 Villeneuve-le-Roi</li>
-              <li><strong>Téléphone :</strong> 09 61 00 74 49</li>
+              <li><strong>Téléphone :</strong> 01 60 21 05 06</li>
             </ul>
           </section>
 
@@ -56,7 +56,7 @@ const MentionsLegales = () => {
               <li>Droit d'opposition au traitement</li>
             </ul>
             <p className="mt-3">Les données collectées via le formulaire de contact (nom, email, téléphone, message) sont utilisées uniquement dans le cadre de la gestion des rendez-vous et de la relation client. Elles ne sont jamais transmises à des tiers.</p>
-            <p>Pour exercer vos droits, contactez-nous par courrier à l'adresse du salon ou par téléphone au 09 61 00 74 49.</p>
+            <p>Pour exercer vos droits, contactez-nous par courrier à l'adresse du salon ou par téléphone au 01 60 21 05 06.</p>
             <p><strong>Responsable du traitement :</strong> Ramzi Araoud</p>
             <p><strong>Durée de conservation :</strong> Les données sont conservées pendant une durée maximale de 3 ans à compter du dernier contact.</p>
           </section>

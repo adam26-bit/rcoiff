@@ -19,7 +19,7 @@ export default function Contact() {
           <div className={`space-y-8 transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"}`}>
             {[
               { icon: MapPin, label: "Adresse", value: "2 Place de la Grande Fontaine", sub: "94290 Villeneuve-le-Roi" },
-              { icon: Phone, label: "Téléphone", value: "09 61 00 74 49", sub: "Du lundi au samedi" },
+              { icon: Phone, label: "Téléphone", value: "01 60 21 05 06", sub: "Du mardi au samedi" },
               { icon: Clock, label: "Horaires", value: "Mar–Ven : 9h–12h / 14h–19h", sub: "Sam : 9h–18h · Lun & Dim : Fermé" },
             ].map((c) => {
               const Icon = c.icon;

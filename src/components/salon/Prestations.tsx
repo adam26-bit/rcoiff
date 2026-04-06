@@ -1,7 +1,13 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Scissors, Sparkles, Palette, Droplets, ChevronRight } from "lucide-react";
-import babyHaircutImg from "@/assets/baby-haircut.jpg";
 import { useState } from "react";
+import prestationCoupeCoiffage from "@/assets/prestation-coupe-coiffage.jpg";
+import prestationCoupeBarbe from "@/assets/prestation-coupe-barbe.jpg";
+import prestationCouronne from "@/assets/prestation-couronne.jpg";
+import prestationCouronneBarbe from "@/assets/prestation-couronne-barbe.jpg";
+import prestationEnfant from "@/assets/prestation-enfant.jpg";
+import prestationJeune from "@/assets/prestation-jeune.jpg";
+import babyHaircutImg from "@/assets/baby-haircut.jpg";
 
 const services = [
   {
@@ -11,7 +17,7 @@ const services = [
     price: "24€",
     items: ["Shampoing inclus", "Coupe sur-mesure", "Coiffage final", "30 min"],
     accent: "from-amber-500/20 to-yellow-600/10",
-    image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80",
+    image: prestationCoupeCoiffage,
   },
   {
     icon: Scissors,
@@ -20,7 +26,7 @@ const services = [
     price: "30€",
     items: ["Shampoing inclus", "Coupe + barbe", "Tondeuse précision", "30 min"],
     accent: "from-rose-500/20 to-pink-600/10",
-    image: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=80",
+    image: prestationCoupeBarbe,
   },
   {
     icon: Sparkles,
@@ -29,7 +35,7 @@ const services = [
     price: "20€",
     items: ["Shampoing inclus", "Tondeuse couronne", "Coiffage", "30 min"],
     accent: "from-blue-500/20 to-indigo-600/10",
-    image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80",
+    image: prestationCouronne,
   },
   {
     icon: Palette,
@@ -38,7 +44,7 @@ const services = [
     price: "26€",
     items: ["Shampoing inclus", "Couronne tondeuse", "Barbe incluse", "30 min"],
     accent: "from-purple-500/20 to-violet-600/10",
-    image: "https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?w=600&q=80",
+    image: prestationCouronneBarbe,
   },
   {
     icon: Droplets,
@@ -47,7 +53,7 @@ const services = [
     price: "18€",
     items: ["Shampoing inclus", "Coupe enfant", "Coiffage", "30 min"],
     accent: "from-emerald-500/20 to-teal-600/10",
-    image: "https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=600&q=80",
+    image: prestationEnfant,
   },
   {
     icon: Scissors,
@@ -56,7 +62,7 @@ const services = [
     price: "20€",
     items: ["Shampoing inclus", "Coupe sur-mesure", "Coiffage", "30 min"],
     accent: "from-cyan-500/20 to-sky-600/10",
-    image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80",
+    image: prestationJeune,
   },
   {
     icon: Droplets,
