@@ -77,7 +77,7 @@ export default function Footer() {
           <div>
             <h4 className="font-display text-lg font-semibold mb-4 text-gold">Horaires</h4>
             <div className="space-y-1.5 font-body text-sm">
-              <div className="flex justify-between text-white/60"><span>Mar - Ven</span><span>9h - 19h30</span></div>
+              <div className="flex justify-between text-white/60"><span>Mar - Ven</span><span>9h - 12h / 14h - 19h</span></div>
               <div className="flex justify-between text-white/60"><span>Samedi</span><span>9h - 18h</span></div>
               <div className="flex justify-between text-white/40"><span>Dim - Lun</span><span>Fermé</span></div>
             </div>
