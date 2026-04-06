@@ -53,7 +53,7 @@ const services = [
     price: "18€",
     items: ["Shampoing inclus", "Coupe enfant", "Coiffage", "30 min"],
     accent: "from-emerald-500/20 to-teal-600/10",
-    image: "https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=600&q=80",
+    image: prestationEnfant,
   },
   {
     icon: Scissors,
