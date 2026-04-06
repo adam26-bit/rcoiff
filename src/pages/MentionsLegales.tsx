@@ -30,7 +30,7 @@ const MentionsLegales = () => {
               <li><strong>SIRET :</strong> 990 587 073 00018</li>
               <li><strong>Activité :</strong> Coiffure</li>
               <li><strong>Adresse :</strong> 2 Place de la Grande Fontaine, 94290 Villeneuve-le-Roi</li>
-              <li><strong>Téléphone :</strong> 09 61 00 74 49</li>
+              <li><strong>Téléphone :</strong> 01 60 21 05 06</li>
             </ul>
           </section>
 
