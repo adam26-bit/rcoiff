@@ -26,7 +26,7 @@ const services = [
     price: "30€",
     items: ["Shampoing inclus", "Coupe + barbe", "Tondeuse précision", "30 min"],
     accent: "from-rose-500/20 to-pink-600/10",
-    image: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=80",
+    image: prestationCoupeBarbe,
   },
   {
     icon: Sparkles,
