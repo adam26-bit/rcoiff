@@ -9,7 +9,7 @@ export default function Hero() {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1920&q=80')`,
+          backgroundImage: `url('https://assets.cdn.global.prodsharedsvc.planityapp.com/next/large-desktop/1.webp')`,
         }}
       />
 

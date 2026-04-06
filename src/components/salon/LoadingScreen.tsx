@@ -47,23 +47,50 @@ export default function LoadingScreen() {
         <div className="absolute bottom-1/3 right-1/4 w-48 h-48 rounded-full border border-gold/5 animate-ping" style={{ animationDuration: '4s' }} />
       </div>
 
-      {/* Scissors icon with spinning border */}
+      {/* Logo animé ciseaux */}
       <div className="relative mb-10">
-        <div className="w-24 h-24 rounded-full bg-gold/5 flex items-center justify-center">
-          <Scissors
-            className="w-12 h-12 text-gold transition-transform duration-500"
-            style={{ transform: `rotate(${progress * 3.6}deg)` }}
-          />
+        <div className="w-28 h-28 rounded-full bg-gold/8 flex items-center justify-center">
+          {/* SVG ciseaux moderne animé */}
+          <svg
+            viewBox="0 0 80 80"
+            className="w-16 h-16"
+            style={{ filter: 'drop-shadow(0 0 8px rgba(201,169,122,0.5))' }}
+          >
+            {/* Lame supérieure */}
+            <g style={{ transformOrigin: '36px 44px', animation: 'scissorOpen 1.8s ease-in-out infinite' }}>
+              <line x1="36" y1="44" x2="10" y2="16" stroke="#C9A97A" strokeWidth="3.5" strokeLinecap="round"/>
+              <circle cx="36" cy="44" r="5" fill="none" stroke="#C9A97A" strokeWidth="2.5"/>
+              <circle cx="36" cy="44" r="1.5" fill="#C9A97A"/>
+            </g>
+            {/* Lame inférieure */}
+            <g style={{ transformOrigin: '36px 44px', animation: 'scissorClose 1.8s ease-in-out infinite' }}>
+              <line x1="36" y1="44" x2="10" y2="68" stroke="#E8D4A8" strokeWidth="3.5" strokeLinecap="round"/>
+              <circle cx="36" cy="44" r="5" fill="none" stroke="#E8D4A8" strokeWidth="2.5"/>
+            </g>
+            {/* Manche */}
+            <line x1="36" y1="44" x2="68" y2="44" stroke="#C9A97A" strokeWidth="3" strokeLinecap="round" opacity="0.7"/>
+            <style>{`
+              @keyframes scissorOpen {
+                0%, 100% { transform: rotate(0deg); }
+                50% { transform: rotate(-18deg); }
+              }
+              @keyframes scissorClose {
+                0%, 100% { transform: rotate(0deg); }
+                50% { transform: rotate(18deg); }
+              }
+            `}</style>
+          </svg>
         </div>
-        <svg className="absolute inset-0 w-24 h-24" viewBox="0 0 96 96">
-          <circle cx="48" cy="48" r="46" fill="none" stroke="hsl(38 50% 55% / 0.15)" strokeWidth="2" />
+        {/* Cercle de progression */}
+        <svg className="absolute inset-0 w-28 h-28" viewBox="0 0 112 112">
+          <circle cx="56" cy="56" r="52" fill="none" stroke="rgba(201,169,122,0.12)" strokeWidth="2" />
           <circle
-            cx="48" cy="48" r="46"
+            cx="56" cy="56" r="52"
             fill="none"
-            stroke="hsl(38 50% 55%)"
-            strokeWidth="2"
-            strokeDasharray={`${2 * Math.PI * 46}`}
-            strokeDashoffset={`${2 * Math.PI * 46 * (1 - progress / 100)}`}
+            stroke="#C9A97A"
+            strokeWidth="2.5"
+            strokeDasharray={`${2 * Math.PI * 52}`}
+            strokeDashoffset={`${2 * Math.PI * 52 * (1 - progress / 100)}`}
             strokeLinecap="round"
             className="transition-all duration-200 ease-out"
             style={{ transform: 'rotate(-90deg)', transformOrigin: 'center' }}
@@ -73,7 +100,7 @@ export default function LoadingScreen() {
 
       {/* Brand */}
       <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-2">
-        R <span className="text-gold">Coiff'</span>
+        R'<span className="text-gold">COIFF</span>
       </h1>
       <p className="text-white/40 font-body text-sm tracking-[0.25em] uppercase mb-10">
         L'excellence capillaire

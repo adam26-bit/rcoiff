@@ -18,7 +18,7 @@ export default function About() {
           {/* Image */}
           <div className="relative rounded-2xl overflow-hidden h-[420px] shadow-2xl">
             <img
-              src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=800&q=85"
+              src="https://assets.cdn.global.prodsharedsvc.planityapp.com/next/large-desktop/1.webp"
               alt="Salon R Coiff' — ambiance premium"
               loading="lazy"
               className="w-full h-full object-cover object-center brightness-75 saturate-90"
