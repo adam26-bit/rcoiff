@@ -1,7 +1,13 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Scissors, Sparkles, Palette, Droplets, ChevronRight } from "lucide-react";
-import babyHaircutImg from "@/assets/baby-haircut.jpg";
 import { useState } from "react";
+import prestationCoupeCoiffage from "@/assets/prestation-coupe-coiffage.jpg";
+import prestationCoupeBarbe from "@/assets/prestation-coupe-barbe.jpg";
+import prestationCouronne from "@/assets/prestation-couronne.jpg";
+import prestationCouronneBarbe from "@/assets/prestation-couronne-barbe.jpg";
+import prestationEnfant from "@/assets/prestation-enfant.jpg";
+import prestationJeune from "@/assets/prestation-jeune.jpg";
+import babyHaircutImg from "@/assets/baby-haircut.jpg";
 
 const services = [
   {
