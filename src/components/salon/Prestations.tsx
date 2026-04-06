@@ -65,7 +65,7 @@ const services = [
     price: "14€",
     items: ["Coupe douce", "Bébé -3 ans", "Sans shampoing", "15 min"],
     accent: "from-pink-500/20 to-rose-600/10",
-    image: "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=600&q=80",
+    image: babyHaircutImg,
   },
 ];
 
