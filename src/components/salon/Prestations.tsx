@@ -44,7 +44,7 @@ const services = [
     price: "26€",
     items: ["Shampoing inclus", "Couronne tondeuse", "Barbe incluse", "30 min"],
     accent: "from-purple-500/20 to-violet-600/10",
-    image: "https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?w=600&q=80",
+    image: prestationCouronneBarbe,
   },
   {
     icon: Droplets,
