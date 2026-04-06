@@ -62,7 +62,7 @@ const services = [
     price: "20€",
     items: ["Shampoing inclus", "Coupe sur-mesure", "Coiffage", "30 min"],
     accent: "from-cyan-500/20 to-sky-600/10",
-    image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80",
+    image: prestationJeune,
   },
   {
     icon: Droplets,
