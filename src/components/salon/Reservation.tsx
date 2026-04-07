@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { Phone, Clock, ExternalLink } from "lucide-react";
+import { Phone, Clock, ExternalLink, Calendar } from "lucide-react";
 
 // ⚠️ Remplacez "rcoiff" par le vrai username Cal.com du salon une fois le compte créé
 const CAL_USERNAME = "rcoiff";
