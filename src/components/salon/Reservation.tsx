@@ -1,30 +1,37 @@
-import { useState } from "react";
+import { useEffect } from "react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { Phone, Calendar, Clock, User, Mail, MessageSquare } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+import { Phone, Clock, ExternalLink } from "lucide-react";
+
+// ⚠️ Remplacez "rcoiff" par le vrai username Cal.com du salon une fois le compte créé
+const CAL_USERNAME = "rcoiff";
+const CAL_EVENT = "rdv";
 
 export default function Reservation() {
   const { ref, isVisible } = useScrollAnimation();
-  const { toast } = useToast();
-  const [form, setForm] = useState({ name: "", email: "", phone: "", service: "", message: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Redirige vers WhatsApp avec les infos pré-remplies
-    const message = encodeURIComponent(
-      `Bonjour R Coiff', je souhaite prendre rendez-vous :\n\n` +
-      `Nom : ${form.name}\n` +
-      `Téléphone : ${form.phone}\n` +
-      `Prestation : ${form.service}\n` +
-      (form.message ? `Message : ${form.message}\n` : "")
-    );
-    window.open(`https://wa.me/33961007449?text=${message}`, "_blank");
-    toast({
-      title: "Demande envoyée !",
-      description: "WhatsApp s'est ouvert avec votre demande. Envoyez le message pour confirmer votre RDV.",
-    });
-    setForm({ name: "", email: "", phone: "", service: "", message: "" });
-  };
+  useEffect(() => {
+    // Charge le script Cal.com une seule fois
+    if ((window as any).Cal) return;
+    const script = document.createElement("script");
+    script.src = "https://app.cal.com/embed/embed.js";
+    script.async = true;
+    script.onload = () => {
+      const Cal = (window as any).Cal;
+      Cal("init", { origin: "https://app.cal.com" });
+      Cal("inline", {
+        elementOrSelector: "#cal-inline",
+        calLink: `${CAL_USERNAME}/${CAL_EVENT}`,
+        layout: "month_view",
+      });
+      Cal("ui", {
+        theme: "dark",
+        styles: { branding: { brandColor: "#C9A96E" } },
+        hideEventTypeDetails: false,
+        layout: "month_view",
+      });
+    };
+    document.head.appendChild(script);
+  }, []);
 
   return (
     <section id="reservation" className="py-24 lg:py-32 bg-secondary/30">
@@ -102,81 +109,26 @@ export default function Reservation() {
             </div>
           </div>
 
-          {/* Form */}
+          {/* Cal.com embed */}
           <div className={`transition-all duration-700 delay-300 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"}`}>
-            <form onSubmit={handleSubmit} className="bg-card border border-border rounded-2xl p-8 shadow-lg">
-              <h3 className="font-display text-2xl font-semibold text-foreground mb-6">Formulaire de réservation</h3>
-
-              <div className="space-y-5">
-                <div className="relative">
-                  <User className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-                  <input
-                    type="text"
-                    placeholder="Votre nom complet"
-                    value={form.name}
-                    onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    required
-                    className="w-full pl-12 pr-4 py-3.5 bg-secondary/50 border border-border rounded-xl font-body text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/20 transition-colors"
-                  />
-                </div>
-
-                <div className="relative">
-                  <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-                  <input
-                    type="email"
-                    placeholder="Votre email"
-                    value={form.email}
-                    onChange={(e) => setForm({ ...form, email: e.target.value })}
-                    required
-                    className="w-full pl-12 pr-4 py-3.5 bg-secondary/50 border border-border rounded-xl font-body text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/20 transition-colors"
-                  />
-                </div>
-
-                <div className="relative">
-                  <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-                  <input
-                    type="tel"
-                    placeholder="Votre téléphone"
-                    value={form.phone}
-                    onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                    required
-                    className="w-full pl-12 pr-4 py-3.5 bg-secondary/50 border border-border rounded-xl font-body text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/20 transition-colors"
-                  />
-                </div>
-
-                <select
-                  value={form.service}
-                  onChange={(e) => setForm({ ...form, service: e.target.value })}
-                  required
-                  className="w-full px-4 py-3.5 bg-secondary/50 border border-border rounded-xl font-body text-sm text-foreground focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/20 transition-colors"
+            <div className="bg-card border border-border rounded-2xl overflow-hidden shadow-lg">
+              <div className="px-6 pt-6 pb-3 flex items-center justify-between">
+                <h3 className="font-display text-xl font-semibold text-foreground">Choisissez votre créneau</h3>
+                <a
+                  href={`https://cal.com/${CAL_USERNAME}/${CAL_EVENT}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 text-gold text-sm font-body hover:underline"
                 >
-                  <option value="">Choisir une prestation</option>
-                  <option value="coupe-homme">Coupe Homme</option>
-                  <option value="coupe-femme">Coupe Femme</option>
-                  <option value="barbe">Barbe</option>
-                  <option value="coloration">Coloration</option>
-                  <option value="soins">Soins Capillaires</option>
-                </select>
-
-                <div className="relative">
-                  <MessageSquare className="absolute left-4 top-4 w-4 h-4 text-muted-foreground" />
-                  <textarea
-                    placeholder="Un message ? (optionnel)"
-                    value={form.message}
-                    onChange={(e) => setForm({ ...form, message: e.target.value })}
-                    rows={4}
-                    className="w-full pl-12 pr-4 py-3.5 bg-secondary/50 border border-border rounded-xl font-body text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/20 transition-colors resize-none"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-gold text-white py-4 rounded-xl font-body font-semibold text-base hover:bg-gold-dark transition-all duration-300 shadow-lg hover:shadow-xl"
-                >
-                  Envoyer ma demande
-                </button>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                  Ouvrir en plein écran
+                </a>
               </div>
-            </form>
+              <div
+                id="cal-inline"
+                style={{ width: "100%", height: "520px", overflow: "hidden" }}
+              />
+            </div>
           </div>
         </div>
       </div>
